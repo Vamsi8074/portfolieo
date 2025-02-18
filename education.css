@@ -1,0 +1,38 @@
+.clg{
+    display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 25px;
+       height: auto;
+
+}
+body{
+    background-color: cadetblue;
+    text-align: center;
+    grid-template-columns: auto;
+}
+.info{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: center;
+    color: blue;
+    font-size: 138%;
+}
+.inter{display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 25px;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 138%;
+
+}
+a{
+    text-decoration: none;
+
+}
+#school{
+    font-size: 22px;
+}

@@ -1,0 +1,29 @@
+
+.HOME{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    flex-wrap: wrap;
+}
+button{
+    margin: 10px;
+    padding: 6px 23px;
+    border: 2px solid blue;
+    background-color: aquamarine;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+marquee{
+    text-shadow: 2p;
+    color: rgb(3, 28, 62);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}

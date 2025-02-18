@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CANTACT INFO</title>
+    <link rel="stylesheet" href="./contact.css" />
+  </head>
+  <body>
+    <img src="./valve.jpg" alt="back groune image" class="background" />
+    <div class="action">
+      <h1>REGISTER HERE</h1>
+      <form id="register">
+        <label for="name">NAME:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your good name"
+        /><br />
+        <br />
+        <strong id="error1"></strong>
+        <label for="Email">EMAIL:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Valid Email ID"
+        /><br />
+        <br />
+        <strong id="error2"></strong>
+        <label for="password">PASSWORD:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter Valid password"
+        /><br />
+        <br />
+        <br />
+        <strong id="error3"></strong>
+        <strong id="error"></strong>
+        <strong id="success"></strong>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    <script>
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        if (name == "" || email == "" || password == "") {
+          document.getElementById("error").innerHTML =
+            "please fill all fieldes";
+          setTimeout(() => {
+            document.getElementById("error").innerHTML = "";
+          }, 3000);
+        }
+        let result = name(/[0-9]/g);
+        console.log(result, "n");
+        if (result) {
+          document.getElementById("error1").innerHTML =
+            "Only Alphabets are Allowed";
+          setTimeout(() => {
+            document.getElementById("error1").innerHTML = "";
+          }, 3000);
+        }
+        if (password.length < 8) {
+          document.getElementById("error3").innerHTML = "Minimum 8 Characters";
+          setTimeout(() => {
+            document.getElementById("error3").innerHTML = "";
+          }, 3000);
+        }
+        if (result == null && emailRegex.test(email) && password.length > 8) {
+          document.getElementById("success").innerHTML = "Form is Submitted";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          setTimeout(() => {
+            document.getElementById("success").innerHTML = "";
+          }, 3000);
+        }
+      };
+      const form = document.getElementById("register");
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>
